@@ -1,0 +1,158 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definições de fonte e cor de fundo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: #2C3E50;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#sidebar_content {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar .side_item {
+    margin: 20px 0;
+}
+
+#sidebar .side_item a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar .side_item i {
+    margin-right: 10px;
+}
+
+#sidebar .side_item:hover {
+    background-color: #34495E;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#sidebar #open_btn {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#sidebar #open_btn_icon {
+    font-size: 20px;
+}
+
+/* Main Content */
+.container {
+    margin-left: 270px;  /* Para evitar sobrepor o sidebar */
+    padding: 20px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+    }
+
+    #sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    #sidebar_content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #sidebar #open_btn {
+        display: block;
+        position: relative;
+        right: 0;
+    }
+}

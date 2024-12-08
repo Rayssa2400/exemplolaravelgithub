@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+}
+
+#inicio {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Topo */
+.topo {
+    background: linear-gradient(to bottom, #ff0303, yellow);
+    color: #000000; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto */
+    margin-top: -30px;
+    width: 1260px;
+    height: 100px;
+    margin-left: -270px;
+    flex-direction: column ;
+}
+
+.topo .display-6 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Sidebar */
+#sidebar{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    background-color: #f5c1749f;
+    height: auto;
+    position: relative;
+    transition: all .4s;
+    min-width: 90px;
+}
+
+#sidebar_content{
+    padding: 12px;
+}
+
+#user_infos{
+    display: flex;
+    flex-direction: column;
+}
+
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side_item{
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 20px;
+    margin-left: -30px;
+
+}
+
+.side_item:hover{
+    background-color: aliceblue;
+}
+
+.side_item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.side_item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+#open_btn{
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: aliceblue;
+    color: #f5c1749f;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon{
+    transform: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon{
+    transform: rotate(180deg)
+}
+
+.item-descricao{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar{
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-descricao{
+    width: 150px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side_item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+/* Login */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.login-box {
+    background-color: #f7b148;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    margin-left: -80px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.login-box .user-icon i {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+    background-color: #333;
+}
+
+.login-box .btn-register {
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.login-box .btn-register:hover {
+    text-decoration: underline;
+}
